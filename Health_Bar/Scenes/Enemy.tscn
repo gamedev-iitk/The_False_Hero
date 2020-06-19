@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/HurtBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprite/Player/Idle0.png" type="Texture" id=4]
+[ext_resource path="res://sprite/Player/Jump1.png" type="Texture" id=5]
+[ext_resource path="res://sprite/Player/Jump4.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/HitArea.tscn" type="PackedScene" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "punchLeft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "punchRight",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+[sub_resource type="CapsuleShape2D" id=3]
+
+[node name="enemy" type="KinematicBody2D"]
+collision_layer = 9
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="health" parent="." instance=ExtResource( 2 )]
+
+[node name="HitAreaDetaect" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="HurtBox" parent="." instance=ExtResource( 3 )]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+shape = SubResource( 3 )
+[connection signal="no_health" from="health" to="." method="_on_health_no_health"]
+[connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+
+[editable path="HurtBox"]
