@@ -110,21 +110,18 @@ default_length = 38.0
 [node name="rarm" type="Bone2D" parent="Skeleton2D/hip/back"]
 position = Vector2( 78.4925, -40.8708 )
 rotation = -2.95337
-scale = Vector2( 1, 1 )
 rest = Transform2D( -0.982338, -0.187117, 0.187117, -0.982338, 78.4925, -40.8708 )
 default_length = 72.0
 
 [node name="rhand" type="Bone2D" parent="Skeleton2D/hip/back/rarm"]
 position = Vector2( 69.2678, 0.642395 )
 rotation = 0.0345382
-scale = Vector2( 1, 1 )
 rest = Transform2D( 0.999404, 0.0345313, -0.0345313, 0.999404, 69.2678, 0.642395 )
 default_length = 46.0
 
 [node name="rpalm" type="Bone2D" parent="Skeleton2D/hip/back/rarm/rhand"]
 position = Vector2( 46.3849, 1.14691 )
 rotation = 0.185633
-scale = Vector2( 1, 1 )
 rest = Transform2D( 0.98282, 0.184569, -0.184569, 0.98282, 46.3849, 1.14691 )
 default_length = 20.0
 
@@ -183,7 +180,6 @@ default_length = 115.0
 [node name="lleg" type="Bone2D" parent="Skeleton2D/hip/ljoint/lthigh"]
 position = Vector2( 111.305, -4.90576 )
 rotation = -0.0405693
-scale = Vector2( 1, 1 )
 rest = Transform2D( 0.999177, -0.0405582, 0.0405582, 0.999177, 111.305, -4.90576 )
 default_length = 152.0
 

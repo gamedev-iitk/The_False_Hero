@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Run3.png-ba0737d2b733bb527ae32472eb3585c5.stex"
+path="res://.import/download.jpg-cdfd3ae589be437b73d5b10dd72f4ed2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Health_Bar/sprite/Player/Run3.png"
-dest_files=[ "res://.import/Run3.png-ba0737d2b733bb527ae32472eb3585c5.stex" ]
+source_file="res://assets/download.jpg"
+dest_files=[ "res://.import/download.jpg-cdfd3ae589be437b73d5b10dd72f4ed2.stex" ]
 
 [params]
 
@@ -29,6 +29,6 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
-size_limit=1
-detect_3d=false
+size_limit=0
+detect_3d=true
 svg/scale=1.0
